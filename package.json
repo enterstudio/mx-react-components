@@ -6,7 +6,9 @@
   "scripts": {
     "release": "eslint src && babel src --out-dir dist",
     "demo": "webpack demo/app.js demo/bundle.js --config demo/webpack.config.js -w & node demo/server.js",
-    "test": "eslint src"
+    "test": "eslint src",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
   },
   "repository": {
     "type": "git",
@@ -27,11 +29,12 @@
   "homepage": "http://moneydesktop.github.io/mx-react-components/",
   "dependencies": {
     "d3": "^3.5.6",
-    "lodash": "^3.10.1",
+    "lodash": "^4.17.5",
     "object-assign": "3.x.x",
-    "radium": "^0.14.1",
+    "radium": "^0.16.0",
     "react": "^0.14.0",
-    "react-dom": "^0.14.0"
+    "react-dom": "^0.14.0",
+    "snyk": "^1.88.0"
   },
   "devDependencies": {
     "babel-core": "^5.6.15",
@@ -43,5 +46,6 @@
     "live-server": "^0.8.1",
     "node-libs-browser": "^0.5.2",
     "webpack": "^1.10.1"
-  }
+  },
+  "snyk": true
 }
